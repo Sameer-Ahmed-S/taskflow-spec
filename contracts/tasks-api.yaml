@@ -90,9 +90,12 @@ components:
     TaskStatus:
       type: string
       enum: [todo, in_progress, done]
+    TaskPriority:
+      type: string
+      enum: [low, medium, high]
     Task:
       type: object
-      required: [id, title, status, created_at, updated_at]
+      required: [id, title, status, priority, created_at, updated_at]
       properties:
         id:
           type: string
@@ -106,6 +109,8 @@ components:
           maxLength: 2000
         status:
           $ref: '#/components/schemas/TaskStatus'
+        priority:
+          $ref: '#/components/schemas/TaskPriority'
         created_at:
           type: string
           format: date-time
@@ -124,6 +129,8 @@ components:
           maxLength: 2000
         status:
           $ref: '#/components/schemas/TaskStatus'
+        priority:
+          $ref: '#/components/schemas/TaskPriority'
     Error:
       type: object
       required: [error]
