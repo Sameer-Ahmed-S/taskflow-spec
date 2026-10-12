@@ -28,4 +28,4 @@ This spec is **authoritative**. All three repos (`taskflow-db`, `taskflow-backen
 ## Non-Functional
 - NFR-1: API validates all input per `contracts/tasks-api.yaml`; invalid input → 400 with error body.
 - NFR-2: Unknown task id → 404.
-- NFR-3: Postgres 16 is the only datastore.
+- NFR-3: SQLite (embedded, file-based) is the datastore. See ADR-005.
