@@ -24,6 +24,7 @@ This spec is **authoritative**. All three repos (`taskflow-db`, `taskflow-backen
 - FR-4: Update title, description, and/or status of a task.
 - FR-5: Delete a task.
 - FR-6: UI shows tasks grouped by status columns (todo / in_progress / done).
+- FR-7..FR-10: task priority (see [specs/001-task-priority](./specs/001-task-priority/spec.md)).
 
 ## Non-Functional
 - NFR-1: API validates all input per `contracts/tasks-api.yaml`; invalid input → 400 with error body.
